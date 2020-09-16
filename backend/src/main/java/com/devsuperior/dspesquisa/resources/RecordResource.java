@@ -32,7 +32,7 @@ import com.devsuperior.dspesquisa.services.RecordService;
 
 public class RecordResource {
 
-		// vai um pré processamento para entregar uma instância automaticamente
+		// Vai um pré processamento para entregar uma instância automaticamente
 		// é uma injeção de dependencia
 		// é necessário fazer uma anotação @Repository no repositório referente
 		// EndPoint -> Rota que o webService irá utilizar

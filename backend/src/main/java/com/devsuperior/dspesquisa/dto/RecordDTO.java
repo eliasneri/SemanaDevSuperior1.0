@@ -28,7 +28,7 @@ public class RecordDTO implements Serializable {
 		age = entity.getAge();
 		gameTitle = entity.getGame().getTitle();
 		gamePlatform = entity.getGame().getPlatform();
-		//getGame para acessar o objeto game... dentro desse objeto, 
+		//getGame ara acessar o objeto game... dentro desse objeto, 
 		//getGenre, para acessar o objeto Genre
 		//getName, para acessar o nome que está associado com o objeto Genre, que está associado o Objeto game
 		genreName = entity.getGame().getGenre().getName();

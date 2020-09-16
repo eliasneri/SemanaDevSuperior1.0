@@ -36,6 +36,6 @@ public class RecordInsertDTO implements Serializable {
 		this.gameId = gameId;
 	}
 	
-	
+	//
 
 }
