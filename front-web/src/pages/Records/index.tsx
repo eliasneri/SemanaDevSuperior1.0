@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { RecordsResponse } from './types';
-import { formatDate } from './Helpers'
+import { formatDate } from './Helpers';
+import { Link } from 'react-router-dom';
 import Pagination from './Pagination'
 
 import './styles.css';
@@ -16,9 +17,9 @@ const Records = () => {     // necessário para criar as lógicas para o código
 
     // para buscar as informações no endpoint da API.
     useEffect(() => {
-        axios.get(`${BASE_URL}/records?linesPerPage=12`)
+        axios.get(`${BASE_URL}/records?linesPerPage=12&page=${activePage}`)
         .then(response => serRecordsResponse(response.data));
-    }, []);
+    }, [activePage]);
 
     // método
     const handlePageChange = (index: number) => {
@@ -27,6 +28,15 @@ const Records = () => {     // necessário para criar as lógicas para o código
 
 return (
     <div className="page-container">
+        
+        <div className="filters-container records-actions">
+        
+        <Link to="/charts">     
+            <button className="action-filters">
+               VER GRÁFICOS 
+            </button>
+        </Link>
+        </div>
         <table className="records-table" cellPadding="0" cellSpacing="0">
             <thead>
                 <tr>
