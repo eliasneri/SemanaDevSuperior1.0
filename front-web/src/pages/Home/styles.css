@@ -1,5 +1,5 @@
 .home-container {
-    margin-top: 150px;
+    margin-top: 90px;
     display: flex;
     justify-content: center;
   }
@@ -67,6 +67,7 @@
     }
     
     .home-text-subtitle {
+      margin-top: 25px;
       font-size: 17px;
     }
   
@@ -91,12 +92,12 @@
     }
   
     .home-actions {
-      height: 50px;
+      height: 30px;
       justify-content: center;
     }
   
     .home-image {
-      display: none;
+     display: none;
     }
   
     .home-text {

@@ -5,7 +5,7 @@
 export const pieOptions = {
     chart: {
       background: "transparent",
-      foreColor: "red",
+      foreColor: "blue",
     },
     colors: ["#a8dadc", "#ed7947", "#00D4FF", "#ffd6a5"],
     legend: {
@@ -16,8 +16,8 @@ export const pieOptions = {
     },
     dataLabels: {
       enabled: true,
-      offsetX: "100px",
-      offsetY: "100px",
+      offsetX: "50px",
+      offsetY: "50px",
       style: {
         colors: ["#a8dadc", "#ed7947", "#00D4FF", "#ffd6a5"],
         fontSize: "20px",

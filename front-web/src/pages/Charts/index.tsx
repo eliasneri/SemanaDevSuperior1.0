@@ -23,7 +23,7 @@ const initialPieData = {
     series: []
 }
 
-const BASE_URL = 'http://localhost:8080'
+const BASE_URL = 'https://sds1-eliasneri.herokuapp.com'
 
 const Charts = () => {
     const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
@@ -62,8 +62,8 @@ return (
                     <Chart 
                        options={barOptions}
                        type="bar"
-                       width="900"
-                       height="650"
+                       width="600"
+                       height="450"
                        series={ [{ data: barChartData}] }
 
                     />
@@ -76,7 +76,7 @@ return (
                      options={ { ...pieOptions, labels: platformData?.labels }}
                      type="donut"
                      series= {platformData?.series}
-                     width="350"
+                     width="300"
                     />
                 </div>
                 <div className="gender-chart">
@@ -85,7 +85,7 @@ return (
                      options= { { ...pieOptions, labels: genderData?.labels}}
                      type="donut"
                      series={ genderData?.series}
-                     width="350"
+                     width="300"
                     /> 
                 </div>
             </div>
