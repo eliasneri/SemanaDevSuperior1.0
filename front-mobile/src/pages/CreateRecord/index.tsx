@@ -1,21 +1,58 @@
-import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { Text, StyleSheet, TextInput, View } from 'react-native';
 import Header from '../../components/Header'
+import PlatformCard from './PlatformCard'
+import { GamePlatform } from './types';
 
 
 const CreateRecord = () => {
+
+const [platform, setPlatform] = useState<GamePlatform>();
+// Vai definir a cor do botão ao ser clicado
+const handleChangePlatform = (selectedPlatform : GamePlatform) => {
+   setPlatform(selectedPlatform);
+}
+
+
     return (
         <>
         <Header />
-        
+         <View style={styles.container}>
+           <TextInput style={styles.inputText} placeholder="Nome"
+           placeholderTextColor="#9e9e9e" maxLength={30}/>
+           
+           <TextInput 
+           keyboardType="numeric"
+           style={styles.inputText} placeholder="Idade"
+           placeholderTextColor="#9E9E9E"
+           maxLength={3}/>
+         </View>
+
+         <View style={styles.platformContainer}>
+            <PlatformCard 
+              platform="PC"
+              icon="laptop"
+              onChange={() => handleChangePlatform}
+              activePlatform={platform}/>
+            <PlatformCard 
+              platform="XBOX"
+              icon="xbox"
+              onChange={() => handleChangePlatform}
+              activePlatform={platform}/>
+            <PlatformCard 
+              platform="PLAYSTATION"
+              icon="playstation"
+              onChange={() => handleChangePlatform}
+              activePlatform={platform}/>
+         </View>
 
         </>       
-        
+         
     );
 }
 
 // CSS
-const styles = StyleSheet.create(
+const styles = StyleSheet.create (
     {
         container: {
           marginTop: '15%',
@@ -34,6 +71,8 @@ const styles = StyleSheet.create(
           marginBottom: 21
         },
         platformContainer: {
+          marginLeft: 20,
+          marginRight: 20,
           marginBottom: 20,
           flexDirection: 'row',
           justifyContent: 'space-between',
