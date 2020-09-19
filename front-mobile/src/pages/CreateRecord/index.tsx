@@ -8,8 +8,8 @@ import { GamePlatform } from './types';
 const CreateRecord = () => {
 
 const [platform, setPlatform] = useState<GamePlatform>();
-// Vai definir a cor do botão ao ser clicado
-const handleChangePlatform = (selectedPlatform : GamePlatform) => {
+
+const handleChangePlatform = (selectedPlatform: GamePlatform) => {
    setPlatform(selectedPlatform);
 }
 
@@ -32,17 +32,17 @@ const handleChangePlatform = (selectedPlatform : GamePlatform) => {
             <PlatformCard 
               platform="PC"
               icon="laptop"
-              onChange={() => handleChangePlatform}
+              onChange={handleChangePlatform}
               activePlatform={platform}/>
             <PlatformCard 
               platform="XBOX"
               icon="xbox"
-              onChange={() => handleChangePlatform}
+              onChange={handleChangePlatform}
               activePlatform={platform}/>
             <PlatformCard 
               platform="PLAYSTATION"
               icon="playstation"
-              onChange={() => handleChangePlatform}
+              onChange={handleChangePlatform}
               activePlatform={platform}/>
          </View>
 

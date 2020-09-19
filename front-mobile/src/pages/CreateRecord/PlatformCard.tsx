@@ -8,7 +8,7 @@ type Props = {
     platform: GamePlatform;
     onChange: (platform: GamePlatform) => void;
     icon: string;
-    activePlatform?: GamePlatform
+    activePlatform?: GamePlatform;
 
 }
 
@@ -16,7 +16,8 @@ const PlatformCard =({
     platform, 
     onChange, 
     icon,
-    activePlatform }: Props) => {
+    activePlatform 
+}: Props) => {
         const isActive = platform === activePlatform;
         const backgroundColor = isActive ? '#fad7c8' : '#fff'
 
