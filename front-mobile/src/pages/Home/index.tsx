@@ -1,22 +1,44 @@
 import React from 'react';
-import { Text, StyleSheet, View, Image } from 'react-native'
+import {FontAwesome5 as Icon} from '@expo/vector-icons'
+import { Text, StyleSheet, View, Image, Alert } from 'react-native'
+import { RectButton } from 'react-native-gesture-handler';
 
 // View funciona como div no react native!
 const Home = () => {
+
+    const handleOnPress = () => {
+        Alert.alert('Você Clicou no botão')
+    }
 return (
-    <View style={styles.container}> 
+    // Fragment, permite colocar várias views
+    <>
+      <View style={styles.container}> 
         <Image source={require('../../assets/gamer.png')} 
         style={styles.gamerImage}    />
         <Text style={styles.title}>Vote Agora</Text>
         <Text style={styles.subTitle}>Nos diga qual é seu jogo favorito!</Text>
-    </View>
+       </View>
+       <View style={styles.footer}> 
+           <RectButton style={styles.button} onPress={handleOnPress}>
+               <Text style={styles.buttonText}>COLETAR DADOS</Text>
+                  <View style={styles.buttonIcon}>
+                     <Text>
+                         <Icon name="chevron-right" color="#FFF" size={25}/>
+                     </Text>
+                  </View>
+           </RectButton>
+
+       </View>
+    
+    
+    </>
 
 )
 };
 
 const styles = StyleSheet.create({
     container: {
-      marginTop:  '5%',
+      marginTop:  '20%',
       backgroundColor: '#0B1F34',
       alignItems: 'center',
     },
