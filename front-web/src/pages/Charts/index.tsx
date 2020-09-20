@@ -23,7 +23,7 @@ const initialPieData = {
     series: []
 }
 
-const BASE_URL = 'https://sds1-eliasneri.herokuapp.com'
+const BASE_URL = 'https://sds1-eliasneri.herokuapp.com';
 
 const Charts = () => {
     const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
@@ -62,8 +62,8 @@ return (
                     <Chart 
                        options={barOptions}
                        type="bar"
-                       width="600"
-                       height="450"
+                       width="700"
+                       height="500"
                        series={ [{ data: barChartData}] }
 
                     />

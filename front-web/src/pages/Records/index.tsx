@@ -7,7 +7,7 @@ import Pagination from './Pagination'
 
 import './styles.css';
 
-const BASE_URL = 'https://sds1-eliasneri.herokuapp.com'
+const BASE_URL = 'https://sds1-eliasneri.herokuapp.com';
 
 const Records = () => {     // necessário para criar as lógicas para o código funcionar
     const [recordsResponse, serRecordsResponse] = useState<RecordsResponse>();
