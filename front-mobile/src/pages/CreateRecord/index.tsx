@@ -198,17 +198,19 @@ const styles = StyleSheet.create (
           marginBottom: 21
         },
         platformContainer: {
-          marginBottom: 20,
+          marginTop: 10,
+          marginBottom: 40,
           flexDirection: 'row',
           justifyContent: 'space-between',
         },
         footer: {
-          marginTop: '15%',
+          marginTop: '6%',
           alignItems: 'center',
         },
         button: {
           backgroundColor: '#00D4FF',
           flexDirection: 'row',
+          marginTop: 10,
           borderRadius: 10,
           height: 60,
           width: '100%',

@@ -28,7 +28,7 @@ return(
         { backgroundColor }]}
         onPress={() => onChange(platform)}
         >
-    <Icon name={icon} size={40} color={textColor} />
+    <Icon name={icon} size={50} color={textColor} />
         <Text style={[styles.platformCardText, {color: textColor }]}>
             {platform === 'PLAYSTATION' ? 'PS' : platform}</Text>
 
@@ -42,7 +42,7 @@ return(
 const styles = StyleSheet.create(
     {
         platformCard: {
-          paddingTop: 30,
+          paddingTop: 40,
           paddingBottom: 20,
           width: '31%',
           backgroundColor: '#FFF',
