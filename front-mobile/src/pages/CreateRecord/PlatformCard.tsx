@@ -19,7 +19,8 @@ const PlatformCard =({
     activePlatform 
 }: Props) => {
         const isActive = platform === activePlatform;
-        const backgroundColor = isActive ? '#fad7c8' : '#fff'
+        const backgroundColor = isActive ? '#fad7c8' : '#fff';
+        const textColor = isActive ? '#ed7947' : '#9e9e9e';
 
 return(
     <RectButton
@@ -27,8 +28,8 @@ return(
         { backgroundColor }]}
         onPress={() => onChange(platform)}
         >
-    <Icon name={icon} size={40} color="#9e9e9e" />
-        <Text style={[styles.platformCardText, {color: '#9e9e9e'}]}>
+    <Icon name={icon} size={40} color={textColor} />
+        <Text style={[styles.platformCardText, {color: textColor }]}>
             {platform === 'PLAYSTATION' ? 'PS' : platform}</Text>
 
     </RectButton>
