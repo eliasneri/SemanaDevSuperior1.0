@@ -11,7 +11,9 @@ Java + Spring Boot + PostgreSQL
 ## FrontEnd
 Desenvolvido usando React e integrado com o BackEnd
 <br>
-Hospedado no Heroku <a href="https://sds1-eliasneri.netlify.app"/>Clique para vistar o Front Web</a>
+Hospedado no Netlifi <a href="https://sds1-eliasneri.netlify.app" target="_blank"/>Clique para vistar o Front Web</a>
+<br>
+Ao acessar o site, possívelmente o backend irá estar em standby, caso isso aconteça, atualize a página dentro de alguns segundos.
 
 ## App Mobile
 Desenvolvido utilizando React Native + Expo
