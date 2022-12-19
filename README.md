@@ -25,3 +25,4 @@ Desenvolvido utilizando React Native + Expo
 
 Obrigado,
 <br>Elias Neri
+  <br>Atualizado em 19/12/2022
